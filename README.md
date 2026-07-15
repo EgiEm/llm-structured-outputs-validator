@@ -1,6 +1,6 @@
-# Brigada Assignments: Week 4
+# 🛠️ Structured LLM Outputs & Tool-Call Validator
 
-This repository tracks assignments and daily challenges completed during Week 4 of the Brigada Developer Internship. The core focus of this week is structured LLM outputs, tool-calling integration, schema enforcement, and guided decoding.
+This repository tracks assignments and daily challenges focusing on structured LLM outputs, tool-calling integration, schema enforcement, and guided decoding.
 
 ## 📁 Repository Structure
 
