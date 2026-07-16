@@ -7,6 +7,7 @@ This repository tracks assignments and daily challenges focusing on structured L
 The challenges are organized by day:
 * `day 1/` - Tool-Calling with an LLM: Raw JSON outputs, regex parsing, and categorization of format failure modes ("format crimes").
 * `day 2/` - The Schema Gate: Implementation of a robust JSON-Schema tool-call validator and repair pipeline with strict nested type checking and failure path reporting.
+* `day 3/` - Schema-Locked Classifier: Locked classifier behind JSON Schema using guided decoding, compared unguided vs guided performance, and documented semantic errors on ambiguous inputs.
 
 ---
 
@@ -23,4 +24,11 @@ The challenges are organized by day:
 * **Deliverables**:
   * [run_challenge.py](day%202/run_challenge.py): A hardened validator (`validate_tool_call`), a deterministic repair helper (`repair`), and a suite of 19 hand-crafted torture tests.
   * [submission.md](day%202/submission.md): A detailed report documenting the validator code, the repair policy table, the 19 torture tests, and the deterministic test run logs.
+
+### Day 3: Schema-Locked Classifier — Before vs After
+* **Objective**: Lock the classifier output format behind a JSON Schema, evaluate syntax/format compliance, and prove that guided decoding guarantees structure/shape but does not prevent semantic classification errors.
+* **Deliverables**:
+  * [run_challenge.py](day%203/run_challenge.py): Evaluation script comparing free generation vs guided decoding across 15 test utterances (including German and ambiguous queries).
+  * [submission.md](day%203/submission.md): Comparison table (Parse % / Valid %), evaluation results, and analysis of 3 schema-valid but semantically incorrect cases.
+
 
