@@ -8,6 +8,7 @@ The challenges are organized by day:
 * `day 1/` - Tool-Calling with an LLM: Raw JSON outputs, regex parsing, and categorization of format failure modes ("format crimes").
 * `day 2/` - The Schema Gate: Implementation of a robust JSON-Schema tool-call validator and repair pipeline with strict nested type checking and failure path reporting.
 * `day 3/` - Schema-Locked Classifier: Locked classifier behind JSON Schema using guided decoding, compared unguided vs guided performance, and documented semantic errors on ambiguous inputs.
+* `day 4/` - The Dispatcher: Implementation of a deterministic dispatcher layer routing validated tool calls to stub handlers while enforcing slot contracts and gracefully trapping execution errors.
 
 ---
 
@@ -30,5 +31,12 @@ The challenges are organized by day:
 * **Deliverables**:
   * [run_challenge.py](day%203/run_challenge.py): Evaluation script comparing free generation vs guided decoding across 15 test utterances (including German and ambiguous queries).
   * [submission.md](day%203/submission.md): Comparison table (Parse % / Valid %), evaluation results, and analysis of 3 schema-valid but semantically incorrect cases.
+
+### Day 4: The Dispatcher — From Validated Call to Real Action
+* **Objective**: Build a robust, deterministic routing layer that processes validated calls, enforces slot-level contracts (required fields and unknown slots), resolves defaults, and traps runtime exceptions safely.
+* **Deliverables**:
+  * [run_challenge.py](day%204/run_challenge.py): Python evaluation runner mapping 17 test cases through a slot-contract argument validation engine to registered executable handlers.
+  * [submission.md](day%204/submission.md): Comprehensive test log matrix showing successful execution paths and fallback payloads for all degradation triggers (unknown intents, missing slots, unknown keys, and code block crashes).
+
 
 
