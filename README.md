@@ -9,6 +9,7 @@ The challenges are organized by day:
 * `day 2/` - The Schema Gate: Implementation of a robust JSON-Schema tool-call validator and repair pipeline with strict nested type checking and failure path reporting.
 * `day 3/` - Schema-Locked Classifier: Locked classifier behind JSON Schema using guided decoding, compared unguided vs guided performance, and documented semantic errors on ambiguous inputs.
 * `day 4/` - The Dispatcher: Implementation of a deterministic dispatcher layer routing validated tool calls to stub handlers while enforcing slot contracts and gracefully trapping execution errors.
+* `day 5/` - v3 Tool-Calling with an LLM: Multi-Intent & the Model Card: End-to-end multi-intent pipeline with array schema validation, repair policies, dispatch execution over 16 test utterances (including German and multi-intents), model card, and Week 5 handoff notes.
 
 ---
 
@@ -37,6 +38,14 @@ The challenges are organized by day:
 * **Deliverables**:
   * [run_challenge.py](day%204/run_challenge.py): Python evaluation runner mapping 17 test cases through a slot-contract argument validation engine to registered executable handlers.
   * [submission.md](day%204/submission.md): Comprehensive test log matrix showing successful execution paths and fallback payloads for all degradation triggers (unknown intents, missing slots, unknown keys, and code block crashes).
+
+### Day 5: v3 Tool-Calling with an LLM — Multi-Intent & the Model Card
+* **Objective**: Ship v3 — a multi-intent, schema-locked, dispatching LLM tool caller supporting multi-action single/compound queries, array validation, repair policies, comprehensive model card, and Week 5 handoff gaps.
+* **Deliverables**:
+  * [oxodin_tool_caller.py](day%205/oxodin_tool_caller.py): Reusable v3 pipeline module handling single and multi-intent array schemas, safety net validator, repair logic, and dispatcher.
+  * [run_challenge.py](day%205/run_challenge.py): Python evaluation harness testing 16 utterances (including 5 multi-intent, 3 German utterances with glosses, single intents, and trapped error cases).
+  * [submission.md](day%205/submission.md): Complete submission containing the v3 Model Card (Schema, Repair Policy, Dispatch Table, Latency, Known Failure Modes) and Week 5 Handoff Note.
+
 
 
 
